@@ -1,0 +1,100 @@
+
+
+/* custom properties */
+:root{
+    --red: #EB5A54;
+    --accent-red: #f7928f;
+    --yellow: #F6D74F;
+    --accent-yellow: #ffea8c;
+}
+
+
+html {
+    font-size: 10px;
+    background-color: var(--yellow);
+}
+body{
+    max-width: 60rem;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+header{
+    text-align: center;
+    color: var(--red);
+    /* margin-bottom: 5rem; */
+    font-family: 'Dancing Script';
+}
+.title{
+    font-family: "Dancing Script";
+    font-size: 4.8rem;
+    /* margin-bottom: 6rem; */
+    margin:auto;
+}
+.subtext{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.6rem;
+    color: rgb(56, 57, 63);
+}
+.subtext span{
+    font-weight: 900;
+}
+
+
+.gameboard{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 6px;
+    margin:0;
+}
+.squares{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 1rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    border-radius: 6px;
+}
+.square{
+    position: relative;
+    background-color: rgb(162, 206, 221);
+    border-radius: 4px;
+}
+.square:hover{
+    cursor: pointer;
+    background-color: rgb(142, 191, 208);
+}
+
+
+.apple{
+    background-color: var(--accent-red);
+
+}
+.cat{
+    background-color: var(--accent-yellow);
+  
+}
+.apple::after{
+    content: '\f6d5';
+}
+.cat::after{
+    content: '\f6be';
+}
+.apple::after, .cat::after{
+    font-family: 'Font Awesome 5 Free';
+    font-size: 8rem;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+}
+
